@@ -1,1 +1,1 @@
-Hi My name is Aditi Srivastava.
+# simple-java-maven-app
