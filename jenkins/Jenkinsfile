@@ -1,10 +1,15 @@
 pipeline {
     agent any
     stages {
+        stage('Mvn install'){
+            steps{
+                sh "sed -i '' 's/3.8.6/3.6.3/g' pom.xml"
+                sh 'mvn clean install'
+            }
+        }
         stage('Build') {
             steps {
-                sh "sed -i '' 's/3.8.6/3.6.3/g' pom.xml"
-                sh "mvn clean install"
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
