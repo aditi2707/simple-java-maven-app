@@ -1,11 +1,15 @@
 pipeline {
     agent any
+    tools {         
+        maven 'apache-maven-3.9.2'         
+        jdk 'java-8'     
+    }
     stages {
-        stage('Mvn install'){
-            steps{
-                sh 'mvn clean install'
-            }
-        }
+        // stage('Mvn install'){
+        //     steps{
+        //         sh 'mvn clean install'
+        //     }
+        // }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
