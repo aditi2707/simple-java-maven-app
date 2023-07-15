@@ -30,7 +30,8 @@ pipeline {
 //                    """
  //                   variable = sh "python3 -c 'import pythtest; pythtest.callFunc()'"
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
-                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc ${a} ${b}').trim()
+  //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc ${a} ${b}').trim()
+                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
                     echo "${a}"
                     echo "${b}"
  //                   echo "Script output: ${scriptOutput}"
