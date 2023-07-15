@@ -1,5 +1,7 @@
 import sys
 def callFunc(a, b):
+  a = "Aditi"
+  b = "Srivastava"
   return a
   return b
   print('------')
