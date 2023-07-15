@@ -2,8 +2,8 @@ import sys
 def callFunc(a, b):
   a = "Aditi"
   b = "Srivastava"
-  return a
-  return b
+  list = [a, b]
+  return list
   print('------')
 if __name__ == '__main__':
   print(locals()[sys.argv[1]](sys.argv[2], sys.argv[3]))
