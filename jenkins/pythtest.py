@@ -6,7 +6,7 @@ def callFunc(a, b):
   return list
   print('------')
 if __name__ == '__main__':
-  locals()[sys.argv[1]](sys.argv[2], sys.argv[3])
+  print(locals()[sys.argv[1]](sys.argv[2], sys.argv[3]))
 
 """
 import sys
