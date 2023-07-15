@@ -22,7 +22,7 @@ pipeline {
         stage("Try Python"){
             steps{
                 script{
-                    def scriptOutput = sh(returnStdout: true, script: 'python3 pythtest.py').trim()
+                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py').trim()
                     echo "Script output: ${scriptOutput}"
                 }
             }
