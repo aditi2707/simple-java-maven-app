@@ -1,10 +1,10 @@
 import sys
-def callFunc(a, b):
+def callFunc():
   a = "why"
   b = "Aditi"
   print('------')
 if __name__ == '__main__':
-  callFunc(a, b)
+  callFunc()
 
 """
 import sys
