@@ -34,7 +34,7 @@ pipeline {
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
                     echo "${a}"
                     echo "${b}"
- //                   echo "Script output: ${scriptOutput}"
+                    echo "Script output: ${scriptOutput}"
                 }
             }
         }
