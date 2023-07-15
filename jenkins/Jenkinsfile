@@ -32,8 +32,9 @@ pipeline {
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
-                    
-                    echo "Script output: ${scriptOutput}"
+                    a = scriptOutput[0]
+                    b = scriptOutput[1]
+//                    echo "Script output: ${scriptOutput}"
                     echo "${a}"
                     echo "${b}"
                 }
