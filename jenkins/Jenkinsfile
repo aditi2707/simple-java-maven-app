@@ -24,7 +24,7 @@ pipeline {
                 script{
                     String a = "Hi"
                     String b = "We"
-                    python(script: '''
+                    python3(script: '''
                     from jenkins import pythtest
                     pythtest.callFunc(${a}, ${b})
                     ''')
