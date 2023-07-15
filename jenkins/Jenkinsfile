@@ -1,3 +1,4 @@
+import groovy.json.JsonSlurper
 pipeline {
     agent any
     tools {         
@@ -22,7 +23,6 @@ pipeline {
         stage("Try Python"){
             steps{
                 script{
-                    import groovy.json.JsonSlurper
                     def a = "Hi"
                     def b = "We"
 //                    sh"""
