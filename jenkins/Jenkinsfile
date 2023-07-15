@@ -1,4 +1,3 @@
-import groovy.json.JsonSlurper
 pipeline {
     agent any
     tools {         
@@ -32,7 +31,7 @@ pipeline {
  //                   variable = sh "python3 -c 'import pythtest; pythtest.callFunc()'"
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
-                    def l = new JsonSlurper().parseText(scriptOutput)
+                    def l = scriptOutput.split(',').collect{it as String}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
 //                    a = l[0]
 //                    b = l[1]
