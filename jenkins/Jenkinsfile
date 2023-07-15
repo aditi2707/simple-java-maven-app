@@ -22,8 +22,8 @@ pipeline {
         stage("Try Python"){
             steps{
                 
-                    String a = "Hi"
-                    String b = "We"
+                    def a = "Hi"
+                    def b = "We"
 //                    sh"""
 //                    variable = python3 jenkins/pythtest.py
 //                    variable.callFunc(${a}, ${b})
