@@ -9,9 +9,22 @@ pipeline {
         //         sh 'mvn clean install'
         //     }
         // }
+        stage("version"){
+            steps{
+                sh "python3 --version"
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+            }
+        }
+        stage("Try Python"){
+            steps{
+                script{
+                    def scriptOutput = sh(returnStdout: true, script: 'python3 pythtest.py').trim()
+                    echo "Script output: ${scriptOutput}"
+                }
             }
         }
         stage('Test') {
