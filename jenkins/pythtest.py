@@ -16,7 +16,7 @@ import sys
 def print_fn():
     print("Hi")
 
-def sum_fn(int a, int b):
+def sum_fn(a, b):
     print(a + b)
 
 if __name__ == "__main__":
