@@ -7,4 +7,4 @@ if __name__ == '__main__':
     # args[0] = current file
     # args[1] = function name
     # args[2:] = function args : (*unpacked)
-    globals()[args[1]](*args[2:])
+  globals()[args[1]](*args[2:])
