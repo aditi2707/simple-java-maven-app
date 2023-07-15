@@ -3,10 +3,6 @@ pipeline {
     tools {         
         maven 'Apache-maven-3.8.8'              
     }
-    parameters{
-        def a = "Hi"
-        def b = "We"
-    }
     stages {
         // stage('Mvn install'){
         //     steps{
@@ -26,15 +22,17 @@ pipeline {
         stage("Try Python"){
             steps{
                 script{
+                    def a = "Hi"
+                    def b = "We"
 //                    sh"""
 //                    variable = python3 jenkins/pythtest.py
 //                    variable.callFunc(${a}, ${b})
 //                    """
  //                   variable = sh "python3 -c 'import pythtest; pythtest.callFunc()'"
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
-                    sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc ${params.a} ${params.b}').trim()
-                    echo "${params.a}"
-                    echo "${params.b}"
+                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc ${params.a} ${params.b}').trim()
+                    echo "${a}"
+                    echo "${b}"
  //                   echo "Script output: ${scriptOutput}"
                 }
             }
