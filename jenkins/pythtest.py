@@ -1,4 +1,4 @@
-def callFunc(a, b):
+def callFunc(c, d):
   a = "why"
   b = "Aditi"
-callFunc(c, d)
+callFunc(a, b)
