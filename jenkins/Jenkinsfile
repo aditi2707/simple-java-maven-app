@@ -24,10 +24,11 @@ pipeline {
                 script{
                     String a = "Hi"
                     String b = "We"
-                    sh"""
-                    variable = python3 jenkins/pythtest.py
-                    variable.callFunc(${a}, ${b})
-                    """
+//                    sh"""
+//                    variable = python3 jenkins/pythtest.py
+//                    variable.callFunc(${a}, ${b})
+//                    """
+                    variable = sh "python -c 'import pythtest; print pythtest.callFunc()'"
                     def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
 //                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py ${a}, ${b}').trim()
                     echo "${a}"
