@@ -8,4 +8,4 @@ if __name__ == '__main__':
     # args[0] = current file
     # args[1] = function name
     # args[2:] = function args : (*unpacked)
-  globals()[callFunc](a, b)
+  globals()[sys.argv[1]](sys.argv[2])
