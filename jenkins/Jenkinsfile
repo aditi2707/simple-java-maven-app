@@ -31,8 +31,10 @@ pipeline {
  //                   variable = sh "python3 -c 'import pythtest; pythtest.callFunc()'"
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
+                    def l = Eval.me(scriptOutput)
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
-                    a = scriptOutput[2]
+                    a = l[0]
+                    b = l[1]
 //                    echo "Script output: ${scriptOutput}"
                     echo "${a}"
                     echo "${b}"
