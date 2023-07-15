@@ -4,7 +4,7 @@ def callFunc(a, b):
   return b
   print('------')
 if __name__ == '__main__':
-  globals()[sys.argv[1]](sys.argv[2], sys.argv[3])
+  locals()[sys.argv[1]](sys.argv[2], sys.argv[3])
 
 """
 import sys
