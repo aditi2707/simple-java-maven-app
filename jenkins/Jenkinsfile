@@ -24,7 +24,11 @@ pipeline {
                 script{
                     String a = "Hi"
                     String b = "We"
-                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py.callFunc(${a}, ${b})').trim()
+                    python(script: '''
+                    from jenkins import pythtest
+                    pythtest.callFunc(${a}, ${b})
+                    ''')
+//                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py.callFunc(${a}, ${b})').trim()
                     echo "${a}"
                     echo "${b}"
                     echo "Script output: ${scriptOutput}"
