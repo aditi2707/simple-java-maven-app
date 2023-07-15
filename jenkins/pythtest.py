@@ -1,10 +1,10 @@
 import sys
-def callFunc():
-  return globals()['a']
-  return globals()['b']
+def callFunc(a, b):
+  return a
+  return b
   print('------')
 if __name__ == '__main__':
-  callFunc()
+  globals()[sys.argv[1]](sys.argv[2], sys.argv[3])
 
 """
 import sys
