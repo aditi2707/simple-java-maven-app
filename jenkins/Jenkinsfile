@@ -21,7 +21,7 @@ pipeline {
         }
         stage("Try Python"){
             steps{
-                
+                script{
                     def a = "Hi"
                     def b = "We"
 //                    sh"""
@@ -34,7 +34,7 @@ pipeline {
                     echo "${a}"
                     echo "${b}"
  //                   echo "Script output: ${scriptOutput}"
-                
+                }
             }
         }
         stage('Test') {
