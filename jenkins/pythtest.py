@@ -1,7 +1,7 @@
 import sys
 def callFunc():
-  a = "why"
-  b = "Aditi"
+  return globals()['a']
+  return globals()['b']
   print('------')
 if __name__ == '__main__':
   callFunc()
