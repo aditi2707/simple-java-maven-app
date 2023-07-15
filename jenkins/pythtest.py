@@ -1,3 +1,3 @@
-a = "why"
-b = "Aditi"
-
+def callFunc(a, b):
+  a = "why"
+  b = "Aditi"
