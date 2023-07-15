@@ -28,7 +28,7 @@ pipeline {
                     variable = python3 jenkins/pythtest.py
                     variable.callFunc(${a}, ${b})
                     """
- //                   def scriptOutput = sh(returnStdout: true, script: ${variable} ).trim()
+                    def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
 //                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py ${a}, ${b}').trim()
                     echo "${a}"
                     echo "${b}"
