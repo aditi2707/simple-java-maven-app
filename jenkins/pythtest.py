@@ -1,8 +1,10 @@
 def callFunc(a, b):
   a = "why"
   b = "Aditi"
-  print(a)
-  print(b)
   print('------')
 if __name__ == '__main__':
-  callFunc(a, b)
+  args = sys.argv
+    # args[0] = current file
+    # args[1] = function name
+    # args[2:] = function args : (*unpacked)
+    globals()[args[1]](*args[2:])
