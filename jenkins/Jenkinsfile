@@ -33,8 +33,8 @@ pipeline {
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
                     def l = scriptOutput.split(',').collect{it as String}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
-//                    a = l[0]
-//                    b = l[1]
+                    a = l[0]
+                    b = l[1]
                     echo "Script output: ${scriptOutput}"
                     echo "Script output1: ${l}"
                     echo "${a}"
