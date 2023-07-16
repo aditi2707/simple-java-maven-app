@@ -1,6 +1,6 @@
 import sys
 def callFunc(a, b):
-  a = "Aditi"
+  a = ["Aditi", "She"]
   b = "Srivastava"
   list = [a, b]
   return list
