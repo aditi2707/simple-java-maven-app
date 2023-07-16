@@ -30,7 +30,7 @@ pipeline {
 //                    """
  //                   variable = sh "python3 -c 'import pythtest; pythtest.callFunc()'"
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
-                    def cmd = '''cd jenkins/pythtest.py && python3 -c 'import Aditi; Aditi.callFunc(a, b)' '''
+                    def cmd = '''cd jenkins && python3 -c 'import Aditi; Aditi.callFunc(a, b)' '''
                     def proc = ["/bin/sh", "-c", cmd].execute()
                     proc.waitFor()
                     def scriptOutput = "return code: ${proc.exitValue()}"
