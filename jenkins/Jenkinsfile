@@ -30,11 +30,11 @@ pipeline {
 //                    """
  //                   variable = sh "python3 -c 'import pythtest; pythtest.callFunc()'"
   //                  def scriptOutput = sh(returnStdout: true, script: '${variable} ${a}, ${b}').trim()
-  //                  def cmd = '''cd jenkins && python3 -c 'callFunc(${a}, ${b})' '''
-   //                 def proc = ["/bin/sh", "-c", cmd].execute()
-  //                  proc.waitFor()
-   //                 def scriptOutput = "return code: ${proc.exitValue()}"
-                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
+                    def cmd = '''cd jenkins && python3 -c 'callFunc("a", "b")' '''
+                    def proc = ["/bin/sh", "-c", cmd].execute()
+                    proc.waitFor()
+                    def scriptOutput = "return code: ${proc.exitValue()}"
+   //                 def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
                     def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as Object}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
                     a = l[0]
