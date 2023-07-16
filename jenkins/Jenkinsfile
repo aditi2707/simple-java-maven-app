@@ -35,14 +35,14 @@ pipeline {
                     proc.waitFor()
                     def scriptOutput = "return code: ${proc.exitValue()}"
    //                 def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b').trim()
-                    def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as Object}
+    //                def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as Object}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
-                    a = l[0]
-                    b = l[1]
+  //                  a = l[0]
+  //                  b = l[1]
                     echo "Script output: ${scriptOutput}"
-                    echo "Script output1: ${l}"
-                    echo "${a}"
-                    echo "${b}"
+  //                  echo "Script output1: ${l}"
+  //                  echo "${a}"
+  //                  echo "${b}"
                 }
             }
         }
