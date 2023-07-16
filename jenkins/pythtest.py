@@ -1,5 +1,5 @@
 import sys
-def Aditi:
+def pythtest:
   glob = "Never Have I Ever"
   def callFunc(a, b):
     a = ["Aditi", "She"]
