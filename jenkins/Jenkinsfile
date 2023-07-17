@@ -41,8 +41,8 @@ pipeline {
    //                 b = l[1]
                     echo "Script output: ${scriptOutput}"
    //                 echo "Script output1: ${l}"
-  //                  echo "${a}"
-  //                  echo "${b}"
+                    echo "${env.a}"
+                    echo "${env.b}"
                 }
             }
         }
