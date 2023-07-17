@@ -41,7 +41,7 @@ pipeline {
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
    //                 a = l[0]
    //                 b = l[1]
-                    echo "Script output: ${scriptOutput}"
+                    echo "Script output: ${wrkFlowSchemeNameCF}"
    //                 echo "Script output1: ${l}"
     //                echo "${env.a}"
                     echo "${env.b}"
