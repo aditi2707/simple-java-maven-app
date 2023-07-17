@@ -34,7 +34,7 @@ pipeline {
   //                  def proc = ["/bin/sh", "-c", cmd].execute()
   //                  proc.waitFor()
   //                  def scriptOutput = "return code: ${proc.exitValue()}"
-                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc os.environ['a'] os.environ['b']').trim()
+                    def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a b).trim()
    //                 def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as String}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
    //                 a = l[0]
