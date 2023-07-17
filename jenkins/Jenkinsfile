@@ -35,7 +35,7 @@ pipeline {
   //                  proc.waitFor()
   //                  def scriptOutput = "return code: ${proc.exitValue()}"
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a').trim()
-                    def wrkFlowSchemeNameCF = cfm.getCustomFieldObjectByName("a")
+                    def wrkFlowSchemeNameCF = cfm.getCustomFieldObjectsByName("a")
                     issue.setCustomFieldValue(wrkFlowSchemeNameCF, scriptOutput)
    //                 def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as String}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
