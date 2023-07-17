@@ -12,7 +12,7 @@ def callFunc(a):
 if __name__ == '__main__':
   test()
   args = sys.argv
-  print(globals()[args[1]](args[2]))
+  print(locals()[args[1]](args[2]))
 
 """
 import sys
