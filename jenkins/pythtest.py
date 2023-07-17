@@ -1,14 +1,14 @@
 import sys
 import os
 glob = "Never Have I Ever"
-def callFunc():
-  os.environ['a'] = "Aditi"
-  os.environ['b'] = "Srivastava"
-  list = [os.environ['a'], os.environ['b']]
-  return list
+def callFunc(a, b):
+  a = "Aditi"
+  b = "Srivastava"
+  list = [a, b]
+  return a
   print('------')
 if __name__ == '__main__':
-  print(callFunc())
+  print(locals()[args[1]](*args[2:])
 
 """
 import sys
