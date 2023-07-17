@@ -8,7 +8,7 @@ def callFunc(a, b):
   return a
   print('------')
 if __name__ == '__main__':
-  print(locals()[args[1]](*args[2:])
+  print(locals()[args[1]](*args[2:]))
 
 """
 import sys
