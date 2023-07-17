@@ -1,14 +1,15 @@
 import sys
 import os
 glob = "Never Have I Ever"
-def callFunc(a, b):
+def callFunc(a):
   a = "Aditi"
   b = "Srivastava"
   list = [a, b]
   return a
   print('------')
 if __name__ == '__main__':
-  print(locals()[args[1]](args[2] args[3]))
+  args = sys.argv
+  print(globals()[args[1]](args[2]))
 
 """
 import sys
