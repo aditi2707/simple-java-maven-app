@@ -5,7 +5,7 @@ class pythtest:
   def callFunc(a, b):
     a = ["Aditi", "She"]
     b = "Srivastava"
-    list = [a, b]
+    list = [os.environ['a'], os.environ['b']]
     return list
     print('------')
   if __name__ == '__main__':
