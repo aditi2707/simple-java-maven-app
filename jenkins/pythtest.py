@@ -1,6 +1,8 @@
 import sys
 import os
 glob = "Never Have I Ever"
+def test():
+  print('Yes')
 def callFunc(a):
   a = "Aditi"
   b = "Srivastava"
