@@ -1,15 +1,14 @@
 import sys
 import os
-class pythtest:
-  glob = "Never Have I Ever"
-  def callFunc(a, b):
-    a = ["Aditi", "She"]
-    b = "Srivastava"
-    list = [os.environ['a'], os.environ['b']]
-    return list
-    print('------')
-  if __name__ == '__main__':
-    print(locals()[sys.argv[1]](sys.argv[2], sys.argv[3]))
+glob = "Never Have I Ever"
+def callFunc(os.environ['a'], os.environ['b']):
+  os.environ['a'] = "Aditi"
+  os.environ['b'] = "Srivastava"
+  list = [os.environ['a'], os.environ['b']]
+  return list
+  print('------')
+if __name__ == '__main__':
+  print(locals()[sys.argv[1]](sys.argv[2], sys.argv[3]))
 
 """
 import sys
