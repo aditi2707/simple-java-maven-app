@@ -1,14 +1,15 @@
 import sys
 import os
+from another import *
 glob = "Never Have I Ever"
 def test():
   print('Yes')
 def callFunc(a):
-  a = "Aditi"
+  a = another.getValue(a)
   b = "Srivastava"
   list = [a, b]
-  return a
-  print('------')
+  #return a
+  print(a)
 if __name__ == '__main__':
   test()
   args = sys.argv
