@@ -2,8 +2,6 @@ import sys
 import os
 from another import *
 glob = "Never Have I Ever"
-def test():
-  print('Yes')
 def callFunc(a):
   a = another.getValue(a)
   b = "Srivastava"
