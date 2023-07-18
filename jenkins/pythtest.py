@@ -1,6 +1,6 @@
 import sys
 import os
-from jenkins.another import *
+import another
 glob = "Never Have I Ever"
 def callFunc(a):
   a = another.getValue(a)
