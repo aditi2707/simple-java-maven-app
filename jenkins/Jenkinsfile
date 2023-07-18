@@ -37,13 +37,13 @@ pipeline {
                     def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py callFunc a').trim()
    //                 def wrkFlowSchemeNameCF = cfm.getCustomFieldObjectsByName("env.a")
    //                 issue.setCustomFieldValue(wrkFlowSchemeNameCF, scriptOutput)
-                    def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as String}
+   //                 def l = scriptOutput.substring(1, scriptOutput.length()-1).split(',').collect{it as String}
   //                  def scriptOutput = sh(returnStdout: true, script: 'python3 jenkins/pythtest.py sum_fn 5 8').trim()
-                    a = l[0]
+   //                 a = l[0]
    //                 b = l[1]
                     echo "Script output: ${scriptOutput}"
    //                 echo "Script output1: ${l}"
-                    echo "${a}"
+   //                 echo "${a}"
     //                echo "${env.b}"
                 }
             }
