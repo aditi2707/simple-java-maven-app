@@ -3,7 +3,7 @@ import os
 import another
 glob = "Never Have I Ever"
 def callFunc(a):
-  ano = another(self)
+  ano = another()
   a = ano.getValue(a)
   b = "Srivastava"
   list = [a, b]
