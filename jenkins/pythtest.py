@@ -9,7 +9,6 @@ def callFunc(a):
   #return a
   print(a)
 if __name__ == '__main__':
-  test()
   args = sys.argv
   print(locals()[args[1]](args[2]))
 
